@@ -1,36 +1,32 @@
-# Port Map Audit
-
 ![Port Map Audit cover](assets/readme-cover.svg)
 
-![stack](https://img.shields.io/badge/stack-Python-7c3aed?style=flat-square) ![python](https://img.shields.io/badge/python-3.9-0891b2?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-b45309?style=flat-square) ![tests](https://img.shields.io/badge/tests-pytest-be185d?style=flat-square)
+# Port Map Audit
 
-> Scan project configs for local port conflicts and risky bindings
+Scan project configs for local port conflicts and risky bindings.
 
-## How I use it
+## Working shape
 
-The project stays focused on one job: take a small input, produce a clear result, and avoid adding a heavy service around a problem that fits in a command line.
+The repo is meant to be opened, understood, and run quickly. The command surface is deliberately narrow: `port-map-audit`.
 
-## Quick start
+## Fresh clone
 
 ```bash
+git clone https://github.com/mertefekurt/port-map-audit.git
+cd port-map-audit
+python -m venv .venv
+source .venv/bin/activate
 python -m pip install -e ".[dev]"
+```
+
+## First command
+
+```bash
 port-map-audit examples/docker-compose.yml
 ```
 
-## What is inside
-
-```text
-examples/       sample inputs
-src/            package source
-tests/          test coverage
-.gitignore      project file
-pyproject.toml  package metadata
-```
-
-## Development
+## Local confidence
 
 ```bash
-python -m pip install -e ".[dev]"
 ruff check .
 pytest
 python -m port_map_audit --help
