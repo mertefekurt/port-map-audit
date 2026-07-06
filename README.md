@@ -1,33 +1,27 @@
-![Port Map Audit cover](assets/readme-cover.svg)
-
 # Port Map Audit
 
-Scan project configs for local port conflicts and risky bindings.
+![Port Map Audit cover](assets/readme-cover.svg)
 
-## Working shape
+## Shape of the tool
 
-The repo is meant to be opened, understood, and run quickly. The command surface is deliberately narrow: `port-map-audit`.
+![Workflow diagram](assets/readme-diagram.svg)
 
-## Fresh clone
+## Try the sample
 
 ```bash
 git clone https://github.com/mertefekurt/port-map-audit.git
 cd port-map-audit
-python -m venv .venv
-source .venv/bin/activate
 python -m pip install -e ".[dev]"
-```
-
-## First command
-
-```bash
 port-map-audit examples/docker-compose.yml
 ```
 
-## Local confidence
+## Useful details
 
-```bash
-ruff check .
-pytest
-python -m port_map_audit --help
-```
+Port Map Audit focuses on one practical job in delivery. The README below is arranged around the shortest path from clone to result.
+
+| Detail | Value |
+| --- | --- |
+| Area | delivery |
+| Entry | `port-map-audit` |
+| Input | YAML snippet |
+| Output | readable terminal output |
